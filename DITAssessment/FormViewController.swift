@@ -37,7 +37,7 @@ class FormViewController: UIViewController {
         
         favouriteColourLabel.text = favouriteColour ?? "No colour was selected"
         salaryLabel.text = salary ?? "No salary was selected"
-        activityLabel.text = activity ?? "No activity was selected"
+        activityLabel.text = activity
         if cars == "" {
             carsLabel.text = "0"
         } else {

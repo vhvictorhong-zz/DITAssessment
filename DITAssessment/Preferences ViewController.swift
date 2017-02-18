@@ -158,19 +158,43 @@ class Preferences_ViewController: UIViewController {
     
     func createActivity() -> String {
         
-        var activityString = ""
+        if movieCheckbox.checkState == M13Checkbox.CheckState.unchecked && swimmingCheckbox.checkState == M13Checkbox.CheckState.unchecked && colouringCheckbox.checkState == M13Checkbox.CheckState.unchecked && runningCheckbox.checkState == M13Checkbox.CheckState.unchecked && bikingCheckbox.checkState == M13Checkbox.CheckState.unchecked && mountainClimbingCheckbox.checkState == M13Checkbox.CheckState.unchecked && familyCheckbox.checkState == M13Checkbox.CheckState.unchecked && skatingCheckbox.checkState == M13Checkbox.CheckState.unchecked && skiingCheckbox.checkState == M13Checkbox.CheckState.unchecked && noneCheckbox.checkState == M13Checkbox.CheckState.unchecked || noneCheckbox.checkState == M13Checkbox.CheckState.checked{
+            return "No activity was selected"
+        }
         
-        print(movieCheckbox.checkState)
-        print(swimmingCheckbox.checkState)
-        print(colouringCheckbox.checkState)
-        print(runningCheckbox.checkState)
-        print(bikingCheckbox.checkState)
-        print(mountainClimbingCheckbox.checkState)
-        print(familyCheckbox.checkState)
-        print(skatingCheckbox.checkState)
-        print(skiingCheckbox.checkState)
-        print(noneCheckbox.checkState)
+        var activityString = "You like "
         
+        if movieCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "movies, "
+        }
+        if swimmingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "swimming, "
+        }
+        if colouringCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "colouring, "
+        }
+        if runningCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "running, "
+        }
+        if bikingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "biking, "
+        }
+        if mountainClimbingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "mountain climbing, "
+        }
+        if familyCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "family, "
+        }
+        if skatingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "skating, "
+        }
+        if skiingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            activityString += "skiing, "
+        }
+        
+        let endIndex = activityString.index(activityString.endIndex, offsetBy: -2)
+        let finalString = "\(activityString.substring(to: endIndex))."
+        return finalString
         
     }
 
@@ -185,6 +209,7 @@ class Preferences_ViewController: UIViewController {
             formVC?.favouriteColour = favouriteColourSelected
             formVC?.salary = salarySelected
             
+            formVC?.activity = createActivity()
             
             formVC?.cars = carsTextField.text
             formVC?.comments = commentsTextField.text
