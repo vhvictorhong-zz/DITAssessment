@@ -30,6 +30,16 @@ class Preferences_ViewController: UIViewController {
     var favouriteColourSelected = "Red"
     var salarySelected = "<30k"
     
+    var isMovieChecked = M13Checkbox.CheckState.unchecked
+    var isSwimmingChecked = M13Checkbox.CheckState.unchecked
+    var isColouringChecked = M13Checkbox.CheckState.unchecked
+    var isRunningChecked = M13Checkbox.CheckState.unchecked
+    var isBikingChecked = M13Checkbox.CheckState.unchecked
+    var isMountainClimbingChecked = M13Checkbox.CheckState.unchecked
+    var isFamilyChecked = M13Checkbox.CheckState.unchecked
+    var isSkatingChecked = M13Checkbox.CheckState.unchecked
+    var isSkiingChecked = M13Checkbox.CheckState.unchecked
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -94,6 +104,116 @@ class Preferences_ViewController: UIViewController {
         }
     }
     
+    @IBAction func movieCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if movieCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isMovieChecked = M13Checkbox.CheckState.checked
+        } else {
+            isMovieChecked = M13Checkbox.CheckState.unchecked
+        }
+    }
+    
+    @IBAction func swimmingCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if swimmingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isSwimmingChecked = M13Checkbox.CheckState.checked
+        } else {
+            isSwimmingChecked = M13Checkbox.CheckState.unchecked
+        }
+    }
+    
+    @IBAction func colouringCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if colouringCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isColouringChecked = M13Checkbox.CheckState.checked
+        } else {
+            isColouringChecked = M13Checkbox.CheckState.unchecked
+        }
+        
+    }
+    
+    @IBAction func runningCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if runningCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isRunningChecked = M13Checkbox.CheckState.checked
+        } else {
+            isRunningChecked = M13Checkbox.CheckState.unchecked
+        }
+        
+    }
+    
+    @IBAction func bikingCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if bikingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isBikingChecked = M13Checkbox.CheckState.checked
+        } else {
+            isBikingChecked = M13Checkbox.CheckState.unchecked
+        }
+    }
+    
+    @IBAction func mountaingCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if mountainClimbingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isMountainClimbingChecked = M13Checkbox.CheckState.checked
+        } else {
+            isMountainClimbingChecked = M13Checkbox.CheckState.unchecked
+        }
+    }
+    
+    @IBAction func familyCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if familyCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isFamilyChecked = M13Checkbox.CheckState.checked
+        } else {
+            isFamilyChecked = M13Checkbox.CheckState.unchecked
+        }
+    }
+    
+    @IBAction func skatingCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if skatingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isSkatingChecked = M13Checkbox.CheckState.checked
+        } else {
+            isSkatingChecked = M13Checkbox.CheckState.unchecked
+        }
+    }
+    
+    @IBAction func skiingCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if skiingCheckbox.checkState == M13Checkbox.CheckState.checked {
+            isSkiingChecked = M13Checkbox.CheckState.checked
+        } else {
+            isSkiingChecked = M13Checkbox.CheckState.unchecked
+        }
+    }
+    
+    @IBAction func noneCheckboxTapped(_ sender: M13Checkbox) {
+        
+        if noneCheckbox.checkState == M13Checkbox.CheckState.checked {
+            movieCheckbox.setCheckState(.unchecked, animated: true)
+            swimmingCheckbox.setCheckState(.unchecked, animated: true)
+            colouringCheckbox.setCheckState(.unchecked, animated: true)
+            runningCheckbox.setCheckState(.unchecked, animated: true)
+            bikingCheckbox.setCheckState(.unchecked, animated: true)
+            mountainClimbingCheckbox.setCheckState(.unchecked, animated: true)
+            familyCheckbox.setCheckState(.unchecked, animated: true)
+            skatingCheckbox.setCheckState(.unchecked, animated: true)
+            skiingCheckbox.setCheckState(.unchecked, animated: true)
+        } else {
+            movieCheckbox.setCheckState(isMovieChecked, animated: true)
+            swimmingCheckbox.setCheckState(isSwimmingChecked, animated: true)
+            colouringCheckbox.setCheckState(isColouringChecked, animated: true)
+            runningCheckbox.setCheckState(isRunningChecked, animated: true)
+            bikingCheckbox.setCheckState(isBikingChecked, animated: true)
+            mountainClimbingCheckbox.setCheckState(isMountainClimbingChecked, animated: true)
+            familyCheckbox.setCheckState(isFamilyChecked, animated: true)
+            skatingCheckbox.setCheckState(isSkatingChecked, animated: true)
+            skiingCheckbox.setCheckState(isSkiingChecked, animated: true)
+            
+        }
+        
+    }
+
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         
         performSegue(withIdentifier: "formView", sender: self)
@@ -108,6 +228,7 @@ class Preferences_ViewController: UIViewController {
         performSegue(withIdentifier: "loginView", sender: self)
         
     }
+    
     func setCheckBox(checkbox: M13Checkbox) {
         
         // Or toggle the state

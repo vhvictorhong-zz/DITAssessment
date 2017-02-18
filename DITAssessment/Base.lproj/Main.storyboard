@@ -253,6 +253,9 @@
                                     <constraint firstAttribute="width" constant="20" id="Esq-04-J1r"/>
                                     <constraint firstAttribute="height" constant="20" id="jfe-zQ-18y"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="movieCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="XX4-Kl-BbW"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqv-o1-bSR" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="287" width="20" height="20"/>
@@ -261,6 +264,9 @@
                                     <constraint firstAttribute="height" constant="20" id="8UO-ip-Cdg"/>
                                     <constraint firstAttribute="width" constant="20" id="DVq-ZG-Xsg"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="swimmingCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="AVR-aJ-Vur"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecy-e5-WIX" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="307" width="20" height="20"/>
@@ -269,6 +275,9 @@
                                     <constraint firstAttribute="height" constant="20" id="HtO-rx-zWk"/>
                                     <constraint firstAttribute="width" constant="20" id="fMp-0N-U2M"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="colouringCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="nGZ-gl-yIq"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYM-sB-R7p" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="327" width="20" height="20"/>
@@ -277,6 +286,9 @@
                                     <constraint firstAttribute="height" constant="20" id="RmF-V7-urK"/>
                                     <constraint firstAttribute="width" constant="20" id="aYI-f8-0L2"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="runningCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="44f-Hv-DL1"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFw-IG-Rgi" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="347" width="20" height="20"/>
@@ -285,6 +297,9 @@
                                     <constraint firstAttribute="height" constant="20" id="AbV-IO-Hpp"/>
                                     <constraint firstAttribute="width" constant="20" id="qYo-k0-fH6"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="bikingCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="tsD-E9-asm"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6H3-Sm-Leh" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="367" width="20" height="20"/>
@@ -293,6 +308,9 @@
                                     <constraint firstAttribute="width" constant="20" id="N3H-mi-8Bh"/>
                                     <constraint firstAttribute="height" constant="20" id="UMJ-na-eQE"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="mountaingCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="bxe-Sz-Baa"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHT-gz-Usm" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="387" width="20" height="20"/>
@@ -301,6 +319,9 @@
                                     <constraint firstAttribute="width" constant="20" id="Osh-gR-ZbN"/>
                                     <constraint firstAttribute="height" constant="20" id="T68-2M-G6n"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="familyCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="nwJ-PH-Ysi"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOB-eI-oTq" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="407" width="20" height="20"/>
@@ -309,6 +330,9 @@
                                     <constraint firstAttribute="height" constant="20" id="6VF-kq-8mU"/>
                                     <constraint firstAttribute="width" constant="20" id="RkB-Pl-Tmg"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="skatingCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="Vfi-hG-bFi"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1l-GF-bBu" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="427" width="20" height="20"/>
@@ -317,6 +341,9 @@
                                     <constraint firstAttribute="height" constant="20" id="0hG-7Y-JXF"/>
                                     <constraint firstAttribute="width" constant="20" id="W1c-jO-5M8"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="skiingCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="ge0-GT-7Xt"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smm-rW-n9P" customClass="M13Checkbox" customModule="DITAssessment" customModuleProvider="target">
                                 <rect key="frame" x="175" y="447" width="20" height="20"/>
@@ -325,6 +352,9 @@
                                     <constraint firstAttribute="width" constant="20" id="tMI-8e-azq"/>
                                     <constraint firstAttribute="height" constant="20" id="w2d-Aj-R7r"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="noneCheckboxTapped:" destination="VP6-PF-mDj" eventType="valueChanged" id="NRx-s4-Gpi"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many cars do you own?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4X-ST-7Vw">
                                 <rect key="frame" x="20" y="482" width="335" height="20.5"/>
