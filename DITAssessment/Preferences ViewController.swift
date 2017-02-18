@@ -27,6 +27,9 @@ class Preferences_ViewController: UIViewController {
     @IBOutlet weak var carsTextField: UITextField!
     @IBOutlet weak var commentsTextField: UITextField!
     
+    var favouriteColourSelected = "Red"
+    var salarySelected = "<30k"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,16 +60,16 @@ class Preferences_ViewController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            print("red")
+            favouriteColourSelected = "Red"
             sender.tintColor = .red
         case 1:
-            print("blue")
+            favouriteColourSelected = "Blue"
             sender.tintColor = .blue
         case 2:
-            print("yellow")
+            favouriteColourSelected = "Yellow"
             sender.tintColor = .yellow
         case 3:
-            print("Other")
+            favouriteColourSelected = "Other"
             sender.tintColor = .black
         default:
             break
@@ -77,15 +80,15 @@ class Preferences_ViewController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            print("<30k")
+            salarySelected = "<30k"
         case 1:
-            print("30-35k")
+            salarySelected = "30-35k"
         case 2:
-            print("35-40k")
+            salarySelected = "35-40k"
         case 3:
-            print("40-45K")
+            salarySelected = "40-45K"
         case 4:
-            print("45K+")
+            salarySelected = "45K+"
         default:
             break
         }
@@ -93,23 +96,7 @@ class Preferences_ViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         
-        print(favouriteColourSegementedControl.selectedSegmentIndex)
-        print(salarySegementedControl.selectedSegmentIndex)
-        
-        print(movieCheckbox.checkState)
-        print(swimmingCheckbox.checkState)
-        print(colouringCheckbox.checkState)
-        print(runningCheckbox.checkState)
-        print(bikingCheckbox.checkState)
-        print(mountainClimbingCheckbox.checkState)
-        print(familyCheckbox.checkState)
-        print(skatingCheckbox.checkState)
-        print(skiingCheckbox.checkState)
-        print(noneCheckbox.checkState)
-        
-//        let user = UserDefaults.standard.dictionary(forKey: "currentUser")
-//        print(user?["lastName"] ?? "")
-//        print(user?["firstName"] ?? "")
+        performSegue(withIdentifier: "formView", sender: self)
         
     }
     
@@ -118,7 +105,7 @@ class Preferences_ViewController: UIViewController {
         UserDefaults.standard.set(false,forKey:"isUserLoggedIn")
         UserDefaults.standard.synchronize()
         
-        self.performSegue(withIdentifier: "loginView", sender: self)
+        performSegue(withIdentifier: "loginView", sender: self)
         
     }
     func setCheckBox(checkbox: M13Checkbox) {
@@ -168,16 +155,43 @@ class Preferences_ViewController: UIViewController {
         checkbox.setCheckState(.unchecked, animated: false)
         
     }
-
     
-    /*
+    func createActivity() -> String {
+        
+        var activityString = ""
+        
+        print(movieCheckbox.checkState)
+        print(swimmingCheckbox.checkState)
+        print(colouringCheckbox.checkState)
+        print(runningCheckbox.checkState)
+        print(bikingCheckbox.checkState)
+        print(mountainClimbingCheckbox.checkState)
+        print(familyCheckbox.checkState)
+        print(skatingCheckbox.checkState)
+        print(skiingCheckbox.checkState)
+        print(noneCheckbox.checkState)
+        
+        
+    }
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "formView" {
+            let formVC = segue.destination as? FormViewController
+            
+            formVC?.favouriteColour = favouriteColourSelected
+            formVC?.salary = salarySelected
+            
+            
+            formVC?.cars = carsTextField.text
+            formVC?.comments = commentsTextField.text
+            
+            
+        }
+        
     }
-    */
 
 }

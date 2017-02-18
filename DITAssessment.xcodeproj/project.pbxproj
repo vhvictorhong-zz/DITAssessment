@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2BFCDC281E57D5BD000F135A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCDC271E57D5BD000F135A /* AppDelegate.swift */; };
-		2BFCDC2A1E57D5BD000F135A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCDC291E57D5BD000F135A /* ViewController.swift */; };
 		2BFCDC2D1E57D5BD000F135A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCDC2B1E57D5BD000F135A /* Main.storyboard */; };
 		2BFCDC301E57D5BD000F135A /* DITAssessment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCDC2E1E57D5BD000F135A /* DITAssessment.xcdatamodeld */; };
 		2BFCDC321E57D5BD000F135A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCDC311E57D5BD000F135A /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		2BFCDC241E57D5BD000F135A /* DITAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DITAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFCDC271E57D5BD000F135A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BFCDC291E57D5BD000F135A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2BFCDC2C1E57D5BD000F135A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BFCDC2F1E57D5BD000F135A /* DITAssessment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DITAssessment.xcdatamodel; sourceTree = "<group>"; };
 		2BFCDC311E57D5BD000F135A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				2BFCDC271E57D5BD000F135A /* AppDelegate.swift */,
-				2BFCDC291E57D5BD000F135A /* ViewController.swift */,
 				2BFCDC2B1E57D5BD000F135A /* Main.storyboard */,
 				2BFCDC3C1E57D86C000F135A /* LoginViewController.swift */,
 				2BFCDC3E1E57D884000F135A /* RegisterViewController.swift */,
@@ -242,7 +239,6 @@
 				2BFCDC301E57D5BD000F135A /* DITAssessment.xcdatamodeld in Sources */,
 				2BFCDC581E57EC3B000F135A /* M13CheckboxBounceController.swift in Sources */,
 				2BFCDC691E57EC4B000F135A /* M13CheckboxPathGenerator.swift in Sources */,
-				2BFCDC2A1E57D5BD000F135A /* ViewController.swift in Sources */,
 				2BFCDC671E57EC4B000F135A /* M13CheckboxCheckPathGenerator.swift in Sources */,
 				2BFCDC5D1E57EC3B000F135A /* M13CheckboxFlatController.swift in Sources */,
 				2BFCDC4B1E57EC29000F135A /* M13Checkbox+IB.swift in Sources */,

@@ -18,10 +18,36 @@ class FormViewController: UIViewController {
     @IBOutlet weak var carsLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
     
+    var favouriteColour: String?
+    var salary: String?
+    var activity: String?
+    var cars: String?
+    var comments: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let user = UserDefaults.standard.dictionary(forKey: "currentUser")
+        let firstName = user?["firstName"] as? String
+        let lastName = user?["lastName"] as? String
+        firstNameLabel.text = firstName
+        lastNameLabel.text = lastName
+        
+        favouriteColourLabel.text = favouriteColour ?? "No colour was selected"
+        salaryLabel.text = salary ?? "No salary was selected"
+        activityLabel.text = activity ?? "No activity was selected"
+        if cars == "" {
+            carsLabel.text = "0"
+        } else {
+            carsLabel.text = cars
+        }
+        if comments == "" {
+            commentsLabel.text = "No comments were made"
+        } else {
+            commentsLabel.text = comments
+        }
         
     }
 
