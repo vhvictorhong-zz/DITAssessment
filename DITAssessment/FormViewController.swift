@@ -12,6 +12,7 @@ class FormViewController: UIViewController {
 
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var favouriteColourLabel: UILabel!
     @IBOutlet weak var salaryLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
@@ -32,8 +33,11 @@ class FormViewController: UIViewController {
         let user = UserDefaults.standard.dictionary(forKey: "currentUser")
         let firstName = user?["firstName"] as? String
         let lastName = user?["lastName"] as? String
+        let address = user?["address"] as? String
+        
         firstNameLabel.text = firstName
         lastNameLabel.text = lastName
+        addressLabel.text = address
         
         favouriteColourLabel.text = favouriteColour ?? "No colour was selected"
         salaryLabel.text = salary ?? "No salary was selected"

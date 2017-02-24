@@ -46,8 +46,15 @@ class RegisterViewController: UIViewController {
             
         }
         
-        if var userInfo: [AnyObject] = UserDefaults.standard.array(forKey: "userList") as? [AnyObject] {
+        if var userInfos: [AnyObject] = UserDefaults.standard.array(forKey: "userList") as? [AnyObject] {
             var userDict: [String: String] = [:]
+            
+            for userInfo in userInfos {
+                if userInfo["name"] as? String == username {
+                    displayMyAlertMessage("This name is registered already")
+                    return
+                }
+            }
             
             userDict["firstName"] = userFirstName
             userDict["lastName"] = userLastName
@@ -55,9 +62,9 @@ class RegisterViewController: UIViewController {
             userDict["name"] = username
             userDict["password"] = userPassword
             
-            userInfo.append(userDict as AnyObject)
+            userInfos.append(userDict as AnyObject)
             
-            UserDefaults.standard.set(userInfo, forKey: "userList")
+            UserDefaults.standard.set(userInfos, forKey: "userList")
             UserDefaults.standard.synchronize()
             
             dismiss(animated: true, completion:nil)
