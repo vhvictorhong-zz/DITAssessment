@@ -19,10 +19,10 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        hideKeyboard()
-        
         usernameTextField.delegate = self
         userPasswordTextField.delegate = self
+        
+        hideKeyboard()
         
     }
 
