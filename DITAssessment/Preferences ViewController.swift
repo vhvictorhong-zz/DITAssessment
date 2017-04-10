@@ -44,6 +44,12 @@ class Preferences_ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        carsTextField.delegate = self
+        commentsTextField.delegate = self
+        
+        hideKeyboard()
+        
         setCheckBox(checkbox: movieCheckbox)
         setCheckBox(checkbox: swimmingCheckbox)
         setCheckBox(checkbox: colouringCheckbox)
@@ -341,3 +347,27 @@ class Preferences_ViewController: UIViewController {
     }
 
 }
+
+extension Preferences_ViewController: UITextFieldDelegate {
+    
+    func hideKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(Preferences_ViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        dismissKeyboard()
+        
+        return false
+    }
+    
+}
+
