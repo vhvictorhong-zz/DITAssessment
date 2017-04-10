@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06AB8797CE8678B23C545A32 /* Pods_DITAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773056548253B82B67310142 /* Pods_DITAssessment.framework */; };
 		2BFCDC281E57D5BD000F135A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCDC271E57D5BD000F135A /* AppDelegate.swift */; };
 		2BFCDC2D1E57D5BD000F135A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCDC2B1E57D5BD000F135A /* Main.storyboard */; };
 		2BFCDC301E57D5BD000F135A /* DITAssessment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCDC2E1E57D5BD000F135A /* DITAssessment.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FE1118598F4994BC56564F2 /* Pods-DITAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DITAssessment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DITAssessment/Pods-DITAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 		2BFCDC241E57D5BD000F135A /* DITAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DITAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFCDC271E57D5BD000F135A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BFCDC2C1E57D5BD000F135A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		2BFCDC641E57EC4B000F135A /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
 		2BFCDC651E57EC4B000F135A /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
 		2BFCDC6B1E57F646000F135A /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		773056548253B82B67310142 /* Pods_DITAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DITAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD4867587BB641B8628E38D /* Pods-DITAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DITAssessment.release.xcconfig"; path = "Pods/Target Support Files/Pods-DITAssessment/Pods-DITAssessment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AB8797CE8678B23C545A32 /* Pods_DITAssessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,8 @@
 			children = (
 				2BFCDC261E57D5BD000F135A /* DITAssessment */,
 				2BFCDC251E57D5BD000F135A /* Products */,
+				C5022CD35CE4BB8DC2536F67 /* Pods */,
+				6FD90B8CA5CB4C41DB195850 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +161,23 @@
 			name = Paths;
 			sourceTree = "<group>";
 		};
+		6FD90B8CA5CB4C41DB195850 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				773056548253B82B67310142 /* Pods_DITAssessment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5022CD35CE4BB8DC2536F67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FE1118598F4994BC56564F2 /* Pods-DITAssessment.debug.xcconfig */,
+				FBD4867587BB641B8628E38D /* Pods-DITAssessment.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BFCDC391E57D5BD000F135A /* Build configuration list for PBXNativeTarget "DITAssessment" */;
 			buildPhases = (
+				4D5396FE0EE24E4AF18A2D9E /* [CP] Check Pods Manifest.lock */,
 				2BFCDC201E57D5BD000F135A /* Sources */,
 				2BFCDC211E57D5BD000F135A /* Frameworks */,
 				2BFCDC221E57D5BD000F135A /* Resources */,
+				AB883C2E0557FA1591FC488B /* [CP] Embed Pods Frameworks */,
+				D61892E2772D1F5219579BE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +248,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D5396FE0EE24E4AF18A2D9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB883C2E0557FA1591FC488B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DITAssessment/Pods-DITAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D61892E2772D1F5219579BE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DITAssessment/Pods-DITAssessment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2BFCDC201E57D5BD000F135A /* Sources */ = {
@@ -371,6 +446,7 @@
 		};
 		2BFCDC3A1E57D5BD000F135A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FE1118598F4994BC56564F2 /* Pods-DITAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -386,6 +462,7 @@
 		};
 		2BFCDC3B1E57D5BD000F135A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBD4867587BB641B8628E38D /* Pods-DITAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

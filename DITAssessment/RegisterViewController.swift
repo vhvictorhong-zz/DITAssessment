@@ -23,14 +23,6 @@ class RegisterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        userFirstNameTextField.delegate = self
-        userLastNameTextField.delegate = self
-        userAddressTextField.delegate = self
-        usernameTextField.delegate = self
-        userPasswordTextField.delegate = self
-        repeatPasswordTextField.delegate = self
-        
-        hideKeyboard()
         
     }
 
@@ -121,25 +113,3 @@ class RegisterViewController: UIViewController {
 
 }
 
-extension RegisterViewController: UITextFieldDelegate {
-    
-    func hideKeyboard() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(RegisterViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        dismissKeyboard()
-        
-        return false
-    }
-    
-}

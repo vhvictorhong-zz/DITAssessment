@@ -19,10 +19,6 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        usernameTextField.delegate = self
-        userPasswordTextField.delegate = self
-        
-        hideKeyboard()
         
     }
 
@@ -84,25 +80,3 @@ class LoginViewController: UIViewController {
 
 }
 
-extension LoginViewController: UITextFieldDelegate {
-    
-    func hideKeyboard() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(LoginViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        dismissKeyboard()
-        
-        return false
-    }
-    
-}
